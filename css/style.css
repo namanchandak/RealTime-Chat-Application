@@ -1,17 +1,24 @@
 .logo{
     display: block;
     margin: auto;
-    width: 150px;
-    height: 150px;
+    width: 145px;
+    height: 145px;
+}
+h1{
+    margin-top: 12px;
+    font-size: 26px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-align: center;
 }
 .container{
     max-width: 955px;
     background-color: #15202b;
     margin: auto  ;
-    height: 60vh ;
+    height: 52vh ;
     padding: 33px;
     overflow-y: auto;
     margin-bottom: 20px;
+    border-radius: 10px;
 }
 .message{
     border: 2px solid;
@@ -38,11 +45,15 @@
     display: block;
     margin: auto;
     width: 100%;
+    font-size: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .btn{
     cursor: pointer;
-    border: 2px solid black;
+    border: 3px solid black;
     border-radius: 6px;
     height: 34px;
 }
@@ -55,7 +66,7 @@
 }
 body 
 {
-    height: 100vh;
+    height: 103vh;
     background-image: linear-gradient(rgb(92,100,221),#15202b);
 
 }
