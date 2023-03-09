@@ -15,6 +15,19 @@ const append=(message,position)=>{
 const name1=prompt("Enter your name to join  ");
 socket.emit('new-user-joined',  name1)
 
+form.addEventListener('submit',(e) =>{
+    e.preventDefault();
+    const message=messageInput.value;
+     append(`You: ${message}`, 'right')
+     socket.emit('send', message)
+     messageInput.value=''
+})
+
 socket.on('user-joined', name1=>{
+
     append(`${name1} joined the chat`, 'right')
+})
+socket.on('receive', data=>{
+
+    append(`${data.name1}: ${data.message} ` , 'left')
 })

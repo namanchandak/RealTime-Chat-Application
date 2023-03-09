@@ -13,6 +13,6 @@ io.on('connection',socket=>{
     })
 
     socket.on('send', message=>{
-        scoket.broadcast.emit('receive', {message : message, name1:users[socket.id]})
+        socket.broadcast.emit('receive', {message : message, name1:users[socket.id]})
     })
 }  )
