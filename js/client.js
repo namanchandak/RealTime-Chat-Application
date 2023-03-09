@@ -33,6 +33,7 @@ form.addEventListener('submit',(e) =>{
 
 socket.on('user-joined', name1=>{
 
+    if(name1!=null)
     append(`${name1} joined the chat`, 'right')
 })
 socket.on('receive', data=>{
@@ -41,6 +42,7 @@ socket.on('receive', data=>{
 })
 socket.on('left', name1=>{
 
+    if(name1!=null)
     append(`${name1}: left the chat`, 'left')
 })
  
