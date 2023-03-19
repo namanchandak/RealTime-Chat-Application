@@ -16,7 +16,16 @@ const append=(message,position)=>{
 }
 
 const name1=prompt("Enter your name to join  ");
+
+if (name1 === null || name1.trim() === "") {
+  location.reload();
+}
+
+
+
 socket.emit('new-user-joined',  name1)
+
+
 
 
 form.addEventListener('submit',(e) =>{
@@ -35,6 +44,8 @@ socket.on('user-joined', name1=>{
 
     if(name1!=null)
     append(`${name1} joined the chat`, 'right')
+
+
 })
 socket.on('receive', data=>{
 
