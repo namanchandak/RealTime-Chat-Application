@@ -23,6 +23,33 @@ if (name1 === null || name1.trim() === "") {
 
 
 
+const showUsersBtn = document.getElementById('show-users-btn');
+const usersContainer = document.getElementById('users-container');
+
+showUsersBtn.addEventListener('click', () => {
+  // emit an event to request the list of connected users from the server
+//   socket.emit('get-connected-users');
+  socket.on('connected-users', (users) => {
+
+    users.forEach((user) => {
+      const userElement = document.createElement('div');
+      
+      
+      append(`You: ${user} is here`, 'right')
+    });
+  });
+});
+
+socket.on('connected-users', (users) => {
+
+  users.forEach((user) => {
+    const userElement = document.createElement('div');
+    
+    
+    append(`You: ${user} is here`, 'right')
+  });
+});
+
 socket.emit('new-user-joined',  name1)
 
 
