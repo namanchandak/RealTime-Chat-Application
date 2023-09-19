@@ -1,6 +1,6 @@
 /// socket io 
 
-const io=require('socket.io')(8000)
+const io=require('socket.io')(process.env.PORT || 8000)
 
 const users={};
 
